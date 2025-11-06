@@ -1,0 +1,114 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 80px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(11, 14, 34, 0.55);
+  transition: top 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  z-index: 999;
+}
+
+.nav-bar.shadow {
+  box-shadow: 0 2px 10px #435680;
+}
+
+.nav-img {
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-alt);
+  transition: 1s ease-in-out;
+}
+
+.nav-img:hover {
+  transform: rotate(360deg);
+}
+
+.nav-sub-cnt-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-sub-cnt-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-text {
+  font-size: 1.2rem;
+
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-text:hover {
+  color: var(--secondary);
+}
+
+/* ====== MOBILE ====== */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 30px; /* increase a bit */
+  height: 22px;
+  padding: 4px; /* small internal space */
+  box-sizing: border-box; /* prevents size blowout */
+  background: transparent;
+  border: 1px solid var(--accent-alt);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  height: 3px;
+  width: 100%;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(3px) translateX(3px) scale(0.7);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-3px) translateX(3px) scale(0.7);
+}
+
+@media (max-width: 768px) {
+  .nav-sub-cnt-right {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(11, 14, 34, 0.95);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .nav-sub-cnt-right {
+    pointer-events: none;
+  }
+  .nav-sub-cnt-right.show {
+    pointer-events: auto;
+  }
+
+  .nav-sub-cnt-right.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}
