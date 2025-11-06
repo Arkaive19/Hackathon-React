@@ -17,10 +17,14 @@
   box-shadow: 0 2px 10px #435680;
 }
 
+.nav {
+  margin-right: 1rem;
+}
+
 .nav-img {
   height: 50px;
   border-radius: 50%;
-  border: 2px solid var(--accent-alt);
+  border: 2px solid var(--accent);
   transition: 1s ease-in-out;
 }
 
@@ -57,12 +61,12 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 30px; /* increase a bit */
-  height: 22px;
+  width: 35px; /* increase a bit */
+  height: 25px;
   padding: 4px; /* small internal space */
   box-sizing: border-box; /* prevents size blowout */
   background: transparent;
-  border: 1px solid var(--accent-alt);
+  border: 1px solid var(--accent);
   cursor: pointer;
 }
 
@@ -105,7 +109,7 @@
 
   .nav-sub-cnt-right.show {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0.5;
   }
 
   .nav-toggle {

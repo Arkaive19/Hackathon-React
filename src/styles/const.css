@@ -25,9 +25,9 @@
 :root {
   --background: #030027;
   --primary: #151e3f;
-  --secondary: #656256;
-  --accent: #e2c044;
-  --accent-alt: #1c7c54;
+  --secondary: #474973;
+  --accent-alt: #e2c044;
+  --accent: #1c7c54;
   --text: #f2f3d9;
 }
 
@@ -65,8 +65,4 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-body {
-  padding-top: 90px;
 }

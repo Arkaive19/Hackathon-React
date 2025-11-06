@@ -1,0 +1,16 @@
+.card {
+  border: 4px solid var(--accent);
+  border-radius: 10px;
+
+  background-color: var(--secondary);
+
+  flex-direction: column;
+  gap: 1dvh;
+
+  padding: 1rem 2rem;
+  animation: animated-border 1.5s infinite;
+}
+
+.btn-alt {
+  font-family: "Space Grotesk", sans-serif;
+}

@@ -12,7 +12,7 @@
 .fade-side-in {
   position: relative;
   opacity: 0;
-  animation: fade-side-in 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: fade-side-in 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
 @keyframes fade-r-side-in {
@@ -29,7 +29,7 @@
 .fade-r-side-in {
   position: relative;
   opacity: 0;
-  animation: fade-r-side-in 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: fade-r-side-in 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
 @keyframes fade-up-in {
@@ -68,7 +68,7 @@
 
 .blur-in {
   transition: 1s ease-in-out;
-  animation: blur-in 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: blur-in 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 @keyframes blur-in {
   from {
@@ -81,7 +81,7 @@
 
 .blur-out {
   transition: 1s ease-in-out;
-  animation: blur-out 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: blur-out 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 @keyframes blur-out {
   from {
@@ -123,5 +123,14 @@
 .fast-fade-in {
   position: relative;
   opacity: 0;
-  animation: fast-fade-in 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: fast-fade-in 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes animated-border {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-alt) 90%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 30px transparent;
+  }
 }

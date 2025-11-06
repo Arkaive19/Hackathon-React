@@ -6,5 +6,13 @@ button {
 
 button:hover {
   transform: translate(-5px, -5px);
-  box-shadow: 5px 5px 0 var(--accent);
+  box-shadow: 5px 5px 0 var(--primary);
+}
+
+.btn-alt {
+  background-color: var(--accent);
+  font-family: "Space Grotesk", sans-serif;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 1.3rem;
 }
