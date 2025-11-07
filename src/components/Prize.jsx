@@ -27,72 +27,74 @@ const Prize = () => {
 
   return (
     <Scroll className="centered-flex content-section" id="prizes">
-      <div className="prize-sub-cnt-left centered-flex">
-        <div className="grand-prize centered-flex">
-          <h1 className="prize-pool-text">
-            {svgBank("crown", "#FFB300")}
-            {svgBank("crown", "#FFB300")}
-            {svgBank("crown", "#FFB300")}
-            <br />A Prize Pool Of:
-          </h1>
-          <span className="prize-pool-amount">
-            Rs. <br /> 50,000!
-          </span>
-        </div>
-      </div>
-      <div className="prize-sub-cnt-right centered-flex">
-        <div className="centered-flex prize-merch-cnt">
-          <div className="centered-flex podium-cnt scroll">
-            <div className="podium-block centered-flex scroll s00">
-              <div className="circle circle-silver centered-flex">
-                {svgBank("trophy", "#C0C0C0")}
-              </div>
-              <div className="podium podium-silver centered-flex">
-                <span className="position">
-                  {svgBank("medal", "#ffffff", "solid")}
-                  {svgBank("medal", "#ffffff", "solid")}
-                </span>
-                <br />
-                <span className="money"> Rs. 15,000</span>
-              </div>
-            </div>
-            <div className="podium-block centered-flex scroll s01">
-              <div className="circle circle-gold centered-flex">
-                {svgBank("trophy", "#FFD700")}
-              </div>
-              <div className="podium podium-gold centered-flex">
-                <span className="position">
-                  {svgBank("medal", "#ffffff", "solid")}
-                  {svgBank("medal", "#ffffff", "solid")}
-                  {svgBank("medal", "#ffffff", "solid")}
-                </span>
-                <br />
-                <span className="money"> Rs. 15,000</span>
-              </div>
-            </div>
-            <div className="podium-block centered-flex scroll s02">
-              <div className="circle circle-bronze centered-flex">
-                {svgBank("trophy", "#B87333")}
-              </div>
-              <div className="podium podium-bronze centered-flex">
-                <span className="position">
-                  {svgBank("medal", "#ffffff", "solid")}
-                </span>
-                <br />
-                <span className="money"> Rs. 15,000</span>
-              </div>
-            </div>
-          </div>
-          <div className="merch-carousel">
-            <Autoplay images={slides} interval={3000} />
+      <div className="prize-cnt centered-flex">
+        <div className="prize-sub-cnt-left centered-flex">
+          <div className="grand-prize centered-flex">
+            <h1 className="prize-pool-text">
+              {svgBank("crown", "#FFB300")}
+              {svgBank("crown", "#FFB300")}
+              {svgBank("crown", "#FFB300")}
+              <br />A Prize Pool Of:
+            </h1>
+            <span className="prize-pool-amount">
+              Rs. <br className="money-break" /> 50,000!
+            </span>
           </div>
         </div>
-        <div className="swags centered-flex">
-          {svgBank("gifts", "#FFB703")}
-          <span className="centered-flex merch-text">
-            <span>Stickers, Merchandise</span>
-            <span>& Freebies For Everyone!</span>
-          </span>
+        <div className="prize-sub-cnt-right centered-flex">
+          <div className="centered-flex prize-merch-cnt">
+            <div className="centered-flex podium-cnt scroll">
+              <div className="podium-block centered-flex scroll s00">
+                <div className="circle circle-silver centered-flex">
+                  {svgBank("trophy", "#C0C0C0")}
+                </div>
+                <div className="podium podium-silver centered-flex">
+                  <span className="position">
+                    {svgBank("medal", "#ffffff", "solid")}
+                    {svgBank("medal", "#ffffff", "solid")}
+                  </span>
+                  <br />
+                  <span className="money"> Rs. 15,000</span>
+                </div>
+              </div>
+              <div className="podium-block centered-flex scroll s01">
+                <div className="circle circle-gold centered-flex">
+                  {svgBank("trophy", "#FFD700")}
+                </div>
+                <div className="podium podium-gold centered-flex">
+                  <span className="position">
+                    {svgBank("medal", "#ffffff", "solid")}
+                    {svgBank("medal", "#ffffff", "solid")}
+                    {svgBank("medal", "#ffffff", "solid")}
+                  </span>
+                  <br />
+                  <span className="money"> Rs. 15,000</span>
+                </div>
+              </div>
+              <div className="podium-block centered-flex scroll s02">
+                <div className="circle circle-bronze centered-flex">
+                  {svgBank("trophy", "#B87333")}
+                </div>
+                <div className="podium podium-bronze centered-flex">
+                  <span className="position">
+                    {svgBank("medal", "#ffffff", "solid")}
+                  </span>
+                  <br />
+                  <span className="money"> Rs. 15,000</span>
+                </div>
+              </div>
+            </div>
+            <div className="merch-carousel">
+              <Autoplay images={slides} interval={3000} />
+            </div>
+          </div>
+          <div className="swags centered-flex">
+            {svgBank("gifts", "#FFB703")}
+            <span className="centered-flex merch-text">
+              <span>Stickers, Merchandise</span>
+              <span>& Freebies For Everyone!</span>
+            </span>
+          </div>
         </div>
       </div>
     </Scroll>

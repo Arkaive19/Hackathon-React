@@ -1,168 +1,23 @@
 #prizes {
+  display: flex;
   flex-direction: row;
-  gap: 0.7rem;
+}
+
+.prize-cnt {
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  padding: 0 2rem;
+  height: 50%;
+  width: 70%;
 }
 
 .prize-sub-cnt-left {
-  height: 50%;
+  height: 100%;
+  width: 30%;
   border-radius: 20px;
-  padding: 1rem 1.5rem;
+  padding: 2%;
   background: linear-gradient(180deg, var(--accent) -15.9%, #f5c144 72.56%);
-}
-.prize-sub-cnt-right {
-  height: 50%;
-  border-radius: 20px;
-  gap: 0.7rem;
-  flex-direction: column;
-  /* background: linear-gradient(180deg, var(--accent) -15.9%, #f5c144 72.56%); */
-}
-.prize-merch-cnt {
-  flex-direction: row;
-  height: 75%;
-  gap: 0.7rem;
-}
-
-.swags svg {
-  height: 12dvh;
-}
-
-.merch-carousel {
-  flex: 1;
-  border: 1px solid white;
-  height: 100%;
-  width: 10rem;
-  border-radius: 10px;
-  border: 2px solid var(--secondary);
-}
-
-.podium-cnt {
-  height: 100%;
-  align-items: flex-end !important;
-  flex-direction: row;
-  padding: 1rem 1.2rem;
-  border-radius: 1rem;
-  border: 2px solid var(--secondary);
-}
-
-.podium {
-  width: 90px;
-  position: relative;
-  border-radius: 10px;
-  padding: 1rem 0rem;
-  align-items: start !important;
-  justify-content: flex-end !important;
-
-  font-family: "Cubano", sans-serif;
-  font-size: 1.4rem;
-
-  writing-mode: vertical-rl;
-
-  gap: 0.2rem;
-  flex-direction: column;
-
-  font-weight: 900;
-  transform: rotateZ(180deg);
-  text-orientation: sideways;
-  color: var(--background);
-}
-.position {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--background);
-}
-
-.podium-block {
-  flex-direction: column;
-}
-
-.podium-gold {
-  height: 190px; /* Adjust height for gold podium */
-  background: linear-gradient(
-    135deg,
-    #fff4c1 0%,
-    #ffd700 25%,
-    #d4af37 50%,
-    #c19a0a 75%,
-    #fff4c1 100%
-  );
-}
-
-.podium-silver {
-  height: 165px; /* Adjust height for silver podium */
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #d9d9d9 25%,
-    #a6a6a6 50%,
-    #e0e0e0 75%,
-    #ffffff 100%
-  );
-}
-
-.podium-bronze {
-  height: 140px; /* Adjust height for bronze podium */
-  background: linear-gradient(
-    135deg,
-    #ffd6a5 0%,
-    #cd7f32 25%,
-    #8b5a2b 50%,
-    #d08c4e 75%,
-    #ffd6a5 100%
-  );
-}
-
-.merch-text {
-  flex-direction: column;
-  align-items: start !important;
-}
-
-.merch-text span {
-  color: var(--background);
-  font-size: 1.5rem;
-  font-family: "Space Grotesk", sans-serif;
-  background: linear-gradient(90deg, var(--accent) -15.9%, #f5c144 75.5%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.position svg {
-  height: 4dvh;
-  width: 2dvw;
-}
-
-.circle {
-  /* height: 50px; */
-  background-color: transparent;
-  border-radius: 5px;
-  position: relative;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  flex-direction: column;
-  transition: 1s ease-in-out;
-  animation: bounce 0.5s infinite alternate;
-}
-.circle svg {
-  height: 100px;
-}
-
-.circle-silver {
-  animation-delay: 0s;
-}
-
-.circle-gold {
-  animation-delay: 0.3s;
-}
-
-.circle-bronze {
-  animation-delay: 0.7s;
-}
-
-.money {
-  color: var(--background);
-  font-family: "Cubano", sans-serif;
 }
 
 .grand-prize {
@@ -180,10 +35,10 @@
 }
 
 .prize-pool-text svg {
-  width: 3dvw;
+  width: 4dvh;
 }
 .prize-pool-text svg:nth-child(2) {
-  width: 6dvw;
+  width: 6dvh;
 }
 
 .prize-pool-amount {
@@ -192,25 +47,308 @@
   font-weight: 900;
   color: var(--background);
 }
+.prize-sub-cnt-right {
+  height: 100%;
+  width: 100%;
+
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.prize-merch-cnt {
+  width: 100%;
+  flex-direction: row;
+  /* flex: 1; */
+
+  gap: 0rem;
+}
 
 .swags {
   justify-content: space-between !important;
   background-color: var(--primary);
-  padding: 1rem;
-  height: 35%;
+  /* aspect-ratio: 3/1; */
+  padding: 0rem 0.5rem;
+  height: 30%;
   width: 100%;
+  gap: 2rem;
   border-radius: 10px;
   flex-direction: row;
 }
 
+.swags svg {
+  height: 10dvh;
+}
+
+.merch-text {
+  flex-direction: column;
+  align-items: start !important;
+}
+
+.merch-text span {
+  color: var(--background);
+  font-size: 1.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  background: linear-gradient(90deg, var(--accent) -15.9%, #f5c144 75.5%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.podium-cnt {
+  height: 100%;
+  width: 80%;
+
+  align-items: flex-end !important;
+  flex-direction: row;
+  padding: 2.5% 5% 2% 5%;
+  gap: 0.8dvw;
+  border-radius: 1rem;
+  border: 2px solid var(--secondary);
+}
+
+.podium {
+  width: 120px;
+  position: relative;
+  border-radius: 10px;
+  padding: 0.5rem 0rem;
+  align-items: start !important;
+  justify-content: flex-end !important;
+
+  font-family: "Cubano", sans-serif;
+  font-size: 1.4rem;
+
+  writing-mode: vertical-rl;
+
+  gap: 0.2rem;
+  flex-direction: column;
+
+  font-weight: 900;
+  transform: rotateZ(180deg);
+  text-orientation: sideways;
+  color: var(--background);
+}
+
+.podium-block {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.podium-gold {
+  height: 23%;
+  background: linear-gradient(
+    135deg,
+    #fff4c1 0%,
+    #ffd700 25%,
+    #d4af37 50%,
+    #c19a0a 75%,
+    #fff4c1 100%
+  );
+}
+
+.podium-silver {
+  height: 20%;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #d9d9d9 25%,
+    #a6a6a6 50%,
+    #e0e0e0 75%,
+    #ffffff 100%
+  );
+}
+
+.podium-bronze {
+  height: 17%;
+  background: linear-gradient(
+    135deg,
+    #ffd6a5 0%,
+    #cd7f32 25%,
+    #8b5a2b 50%,
+    #d08c4e 75%,
+    #ffd6a5 100%
+  );
+}
+.position {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 1vw, 1.4vw);
+  color: var(--background);
+}
+
+.position svg {
+  height: 4dvh;
+}
+
+.money {
+  color: var(--background);
+  font-family: "Cubano", sans-serif;
+}
+
+.circle {
+  background-color: transparent;
+  border-radius: 5px;
+  /* position: relative; */
+  /* left: 25%; */
+  /* transform: translateX(-50%); */
+  flex-direction: column;
+  transition: 1s ease-in-out;
+  animation: bounce 0.5s infinite alternate;
+}
+.circle svg {
+  height: 7dvh;
+}
+
+.circle-silver {
+  animation-delay: 0s;
+}
+
+.circle-gold {
+  animation-delay: 0.3s;
+}
+
+.circle-bronze {
+  animation-delay: 0.7s;
+}
+
+.merch-carousel {
+  width: 20%;
+  /* height: 100%; */
+  aspect-ratio: 1 / 2; /* width : height */
+  flex: 0 0 auto; /* don’t grow or shrink */
+  border-radius: 20px;
+  border: 1px solid var(--secondary);
+}
+
 @keyframes bounce {
   0% {
-    transform: translate(-50%, 0) scaleY(0.95);
+    transform: translate(0%, 0) scaleY(0.95);
   }
   50% {
-    transform: translate(-50%, -10%) scaleY(1.05);
+    transform: translate(0%, -6%) scaleY(1.05);
   }
   100% {
-    transform: translate(-50%, -15%) scaleY(1);
+    transform: translate(0%, -10%) scaleY(1);
+  }
+}
+
+@media (max-width: 1800px) {
+  .merch-carousel {
+    aspect-ratio: 1/2.5;
+  }
+}
+
+@media (max-width: 1460px) {
+  .prize-sub-cnt-left {
+    width: 100%;
+  }
+  .grand-prize {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .merch-carousel {
+    aspect-ratio: 1/2.8;
+  }
+}
+@media (max-width: 1425px) {
+  .prize-cnt {
+    flex-direction: column;
+    gap: 1rem;
+    /* padding: 200rem; */
+  }
+
+  .prize-merch-cnt {
+    gap: 1rem;
+  }
+
+  .money-break {
+    display: none;
+  }
+}
+
+/* Small screens */
+@media (max-width: 992px) {
+  .prize-cnt {
+    flex-direction: column;
+    width: 90%;
+    padding: 0 1rem;
+  }
+
+  .prize-sub-cnt-left {
+    width: 100%;
+    height: auto;
+    padding: 1%;
+  }
+
+  .prize-sub-cnt-right {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .prize-merch-cnt {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .swags {
+    flex-direction: column;
+    height: auto;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .merch-carousel {
+    display: none;
+  }
+
+  .circle svg {
+    height: 5dvh;
+  }
+
+  .prize-pool-text {
+    font-size: 1.5rem;
+  }
+
+  .prize-pool-amount {
+    font-size: 2.5rem;
+  }
+}
+
+/* Extra small screens (mobile) */
+@media (max-width: 600px) {
+  .prize-cnt {
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  .prize-sub-cnt-left {
+    padding: 0.5%;
+  }
+
+  .merch-carousel {
+    width: 40%;
+    aspect-ratio: 1 / 2.8;
+  }
+
+  .podium-cnt {
+    padding: 1% 2% 1% 2%;
+  }
+
+  .podium {
+    width: 70px;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+  }
+
+  .prize-pool-text {
+    font-size: 1.2rem;
+  }
+
+  .prize-pool-amount {
+    font-size: 2rem;
+  }
+
+  .circle svg {
+    height: 4.5dvh;
   }
 }
