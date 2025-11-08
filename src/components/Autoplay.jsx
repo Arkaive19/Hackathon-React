@@ -1,45 +1,43 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const Autoplay = ({
-  images = [],
-  interval = 2500,
-  className = "w-full h-full relative",
-}) => {
+const Autoplay = ({ images = [], interval = 2500, className = "" }) => {
   const [index, setIndex] = useState(0);
   const len = images.length;
   const timeoutRef = useRef(null);
 
   useEffect(() => {
     if (len <= 1) return;
-
-    timeoutRef.current = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % len);
-    }, interval);
-
+    timeoutRef.current = setTimeout(
+      () => setIndex((p) => (p + 1) % len),
+      interval
+    );
     return () => clearTimeout(timeoutRef.current);
   }, [index, interval, len]);
 
   return (
-    <div className={className} style={{ overflow: "hidden" }}>
+    <div
+      className={`relative overflow-hidden ${className}`}
+      style={{ width: "100%", height: "100%", display: "block" }}
+    >
       <div
         style={{
           display: "flex",
-          width: `${len * 100}%`,
-          transform: `translateX(-${index * (100 / len)}%)`,
-          transition: "transform 0.8s ease-in-out",
           height: "100%",
+          transform: `translateX(-${index * 100}%)`,
+          transition: "transform 0.8s ease-in-out",
         }}
       >
         {images.map((src, i) => (
-          <img
+          <div
             key={i}
-            src={src}
-            alt={`slide-${i}`}
             style={{
-              width: `${100 / len}%`,
-              height: "100%",
-              objectFit: "cover",
               flexShrink: 0,
+              width: "100%",
+              height: "100%",
+              backgroundImage: `url(${src})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "repeat", // fills gaps
+              backgroundPosition: "center",
             }}
           />
         ))}

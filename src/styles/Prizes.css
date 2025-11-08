@@ -1,371 +1,94 @@
-#prizes {
-  display: flex;
-  flex-direction: row;
+#prize-grid {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: repeat(6, 1fr);
+	gap: 20px;
+	width: 75%;
+	height: 75%;
 }
-
-.prize-cnt {
-  flex-direction: row;
-  gap: 1rem;
-  flex-wrap: nowrap;
-  padding: 0 2rem;
-  height: 50%;
-  width: 70%;
+#prize-grid > div {
+	border-radius: 1rem;
+	display: grid;
+	place-items: center;
+	font-weight: 700;
+	text-transform: capitalize;
+	color: #fff;
 }
-
-.prize-sub-cnt-left {
-  height: 100%;
-  width: 30%;
-  border-radius: 20px;
-  padding: 2%;
-  background: linear-gradient(180deg, var(--accent) -15.9%, #f5c144 72.56%);
-}
-
-.grand-prize {
-  height: 90%;
-  width: 100%;
-  flex-direction: column;
-  align-items: start !important;
-  justify-content: space-between !important;
-}
-
-.prize-pool-text {
-  font-size: 2rem;
-  font-weight: 550;
-  color: var(--background);
-}
-
-.prize-pool-text svg {
-  width: 4dvh;
-}
-.prize-pool-text svg:nth-child(2) {
-  width: 6dvh;
-}
-
-.prize-pool-amount {
-  font-family: "Cubano", sans-serif;
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: var(--background);
-}
-.prize-sub-cnt-right {
-  height: 100%;
-  width: 100%;
-
-  flex: 1;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.prize-merch-cnt {
-  width: 100%;
-  flex-direction: row;
-  /* flex: 1; */
-
-  gap: 1rem;
-}
-
-.swags {
-  justify-content: space-between !important;
-  background-color: var(--primary);
-  /* aspect-ratio: 3/1; */
-  padding: 0rem 0.5rem;
-  height: 30%;
-  width: 100%;
-  gap: 2rem;
-  border-radius: 10px;
-  flex-direction: row;
-}
-
-.swags svg {
-  height: 10dvh;
-}
-
-.merch-text {
-  flex-direction: column;
-  align-items: start !important;
-}
-
-.merch-text span {
-  color: var(--background);
-  font-size: 1.5rem;
-  font-family: "Space Grotesk", sans-serif;
-  background: linear-gradient(90deg, var(--accent) -15.9%, #f5c144 75.5%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.podium-cnt {
-  height: 100%;
-  width: 80%;
-
-  align-items: flex-end !important;
-  flex-direction: row;
-  padding: 2.5% 5% 2% 5%;
-  gap: 0.8dvw;
-  border-radius: 1rem;
-  border: 2px solid var(--secondary);
-}
-
-.podium {
-  width: 120px;
-  position: relative;
-  border-radius: 10px;
-  padding: 0.5rem 0rem;
-  align-items: start !important;
-  justify-content: flex-end !important;
-
-  font-family: "Cubano", sans-serif;
-  font-size: 1.4rem;
-
-  writing-mode: vertical-rl;
-
-  gap: 0.2rem;
-  flex-direction: column;
-
-  font-weight: 900;
-  transform: rotateZ(180deg);
-  text-orientation: sideways;
-  color: var(--background);
-}
-
-.podium-block {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.podium-gold {
-  height: 23%;
-  background: linear-gradient(
-    135deg,
-    #fff4c1 0%,
-    #ffd700 25%,
-    #d4af37 50%,
-    #c19a0a 75%,
-    #fff4c1 100%
-  );
-}
-
-.podium-silver {
-  height: 20%;
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #d9d9d9 25%,
-    #a6a6a6 50%,
-    #e0e0e0 75%,
-    #ffffff 100%
-  );
-}
-
-.podium-bronze {
-  height: 17%;
-  background: linear-gradient(
-    135deg,
-    #ffd6a5 0%,
-    #cd7f32 25%,
-    #8b5a2b 50%,
-    #d08c4e 75%,
-    #ffd6a5 100%
-  );
-}
-.position {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: clamp(1rem, 1vw, 1.4vw);
-  color: var(--background);
-}
-
-.position svg {
-  height: 4dvh;
-}
-
-.money {
-  color: var(--background);
-  font-family: "Cubano", sans-serif;
-}
-
-.circle {
-  background-color: transparent;
-  border-radius: 5px;
-  /* position: relative; */
-  /* left: 25%; */
-  /* transform: translateX(-50%); */
-  flex-direction: column;
-  transition: 1s ease-in-out;
-  animation: bounce 0.5s infinite alternate;
-}
-.circle svg {
-  height: 7dvh;
-}
-
-.circle-silver {
-  animation-delay: 0s;
-}
-
-.circle-gold {
-  animation-delay: 0.3s;
-}
-
-.circle-bronze {
-  animation-delay: 0.7s;
-}
-
-.merch-carousel {
-  width: 20%;
-  height: 100%;
-  aspect-ratio: 1 / 2; /* width : height */
-  flex: 0 0 auto; /* don’t grow or shrink */
-  border-radius: 20px;
+#prize-div1 {
+	grid-area: 1 / 1 / 5 / 2;
+	background: #f23557;
   overflow: hidden;
-  border: 1px solid var(--secondary);
+}
+#prize-div2 {
+	grid-area: 1 / 2 / 5 / 5;
+	background: #f0d43a;
+	color: #000;
+}
+#prize-div3 {
+	grid-area: 1 / 5 / 7 / 7;
+	background: #22b2da;
+}
+#prize-div4 {
+	grid-area: 5 / 1 / 7 / 5;
+	background: #3b4a6b;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translate(0%, 0) scaleY(0.95);
-  }
-  50% {
-    transform: translate(0%, -6%) scaleY(1.05);
-  }
-  100% {
-    transform: translate(0%, -10%) scaleY(1);
-  }
+.prize-gift-icon{
+  height: 60%;
 }
 
-@media (max-width: 1800px) {
-  .merch-carousel {
-    aspect-ratio: 1/2.5;
-  }
+.prize-gift-icon svg{
+  height: 100%;
 }
 
-@media (max-width: 1460px) {
-  .prize-sub-cnt-left {
-    width: 100%;
-  }
+.prize-gift-text{
+  font-family: 'Space Grotesk',sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  align-items: start;
+}
 
-  .podium{
-    width: 100px;
-  }
-  .grand-prize {
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  .merch-carousel {
-    aspect-ratio: 1/3.8;
-  }
+#break2{
+  display: none;
 }
 
 
-@media (max-width: 1425px) {
-  .prize-cnt {
-    flex-direction: column;
-    gap: 1rem;
-  
-  }
 
-  .prize-merch-cnt {
-    gap: 1rem;
-  }
+@media (max-width: 1024px) {
+	#prize-grid {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(8, 1fr);
+	}
+	#prize-div1 { grid-area: 1 / 1 / 5 / 2; }
+	#prize-div2 { grid-area: 1 / 2 / 5 / 5; }
+	#prize-div3 { grid-area: 5 / 1 / 8 / 5; }
+	#prize-div4 { grid-area: 8 / 1 / 9 / 5; }
 
-    .merch-carousel {
-    aspect-ratio: 1/1.8;
-  }
-
-  .money-break {
-    display: none;
-  }
+  .prize-gift-icon{
+  height: 100%;
+ }
 }
 
-/* Small screens */
-@media (max-width: 992px) {
-  .prize-cnt {
-    flex-direction: column;
-    width: 90%;
-    padding: 0 1rem;
-  }
+@media (max-width: 768px) {
+	/* #prize-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(4, auto);
+	}
+	#prize-div1, #prize-div2, #prize-div3, #prize-div4 {
+		grid-area: auto;
+		min-height: 200px;
+	} */
 
-  .prize-sub-cnt-left {
-    width: 100%;
-    height: auto;
-    padding: 1%;
-  }
+  #prize-div1 { grid-area: 1 / 1 / 5 / 2; }
+	#prize-div2 { grid-area: 1 / 2 / 5 / 5; }
+	#prize-div3 { grid-area: 5 / 1 / 8 / 5; }
+	#prize-div4 { grid-area: 8 / 1 / 9 / 5; }
 
-  .prize-sub-cnt-right {
-    width: 100%;
-    gap: 0.5rem;
-  }
-
-  .prize-merch-cnt {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .swags {
-    flex-direction: column;
-    height: auto;
-    gap: 0.5rem;
-    padding: 0.5rem;
-  }
-
-  .merch-carousel {
-    display: none;
-  }
-
-  .circle svg {
-    height: 5dvh;
-  }
-
-  .prize-pool-text {
-    font-size: 1.5rem;
-  }
-
-  .prize-pool-amount {
-    font-size: 2.5rem;
-  }
-}
-
-/* Extra small screens (mobile) */
-@media (max-width: 600px) {
-  .prize-cnt {
-    gap: 2rem;
-    padding: 0 0.5rem;
-  }
-
-  .prize-sub-cnt-left {
-    padding: 0.5%;
-  }
-
-  .merch-carousel {
-    width: 40%;
-    aspect-ratio: 1 / 2.8;
-  }
-
-  .podium-cnt {
-    padding: 1% 2% 1% 2%;
-  }
-
-  .podium {
-    width: 70px;
-    font-size: clamp(0.7rem, 1vw, 0.9rem);
-  }
-
-  .prize-pool-text {
-        font-size: 1.2rem;
-  }
-
-  .prize-pool-amount {
-    font-size: 2rem;
-  }
-  .position{
-    display: none;
-  }
-  .money{
-    font-size: 1.4rem;
-  }
-
-  .circle svg {
-    height: 4.5dvh;
-  }
+  .prize-gift-icon{
+  height: 80%;
+ }
+ #break2{
+  display: block;
+ }
 }

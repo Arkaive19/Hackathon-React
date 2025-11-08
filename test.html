@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#grid {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: repeat(6, 1fr);
+	gap: 20px;
+	width: 100%;
+	height: 100vh;
+}
+#grid > div {
+	border-radius: 1rem;
+	display: grid;
+	place-items: center;
+	font-weight: 700;
+	text-transform: capitalize;
+	color: #fff;
+}
+#div1 {
+	grid-area: 1 / 1 / 5 / 3;
+	background: #f23557;
+}
+#div2 {
+	grid-area: 1 / 3 / 5 / 5;
+	background: #f0d43a;
+	color: #000;
+}
+#div3 {
+	grid-area: 1 / 5 / 7 / 7;
+	background: #22b2da;
+}
+#div4 {
+	grid-area: 5 / 1 / 7 / 5;
+	background: #3b4a6b;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+	#grid {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(8, 1fr);
+	}
+	#div1 { grid-area: 1 / 1 / 4 / 3; }
+	#div2 { grid-area: 1 / 3 / 4 / 5; }
+	#div3 { grid-area: 4 / 1 / 8 / 5; }
+	#div4 { grid-area: 8 / 1 / 9 / 5; }
+}
+
+@media (max-width: 768px) {
+	#grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, auto);
+	}
+	#div1, #div2, #div3, #div4 {
+		grid-area: auto;
+		min-height: 200px;
+	}
+}
+
+
+    </style>
+</head>
+<body>
+
+<div id="grid">
+	<div id="div1">div #1</div>
+	<div id="div2">div #2</div>
+	<div id="div3">div #3</div>
+	<div id="div4">div #4</div>
+</div>
+
+</body>
+</html>
+
+      <!-- <div className="prize-cnt centered-flex">
+        <div className="prize-sub-cnt-left centered-flex">
+          <div className="grand-prize centered-flex">
+            <h1 className="prize-pool-text">
+              {svgBank("crown", "#FFB300")}
+              {svgBank("crown", "#FFB300")}
+              {svgBank("crown", "#FFB300")}
+              <br />A Prize Pool Of:
+            </h1>
+            <span className="prize-pool-amount">
+              Rs. <br className="money-break" /> 50,000!
+            </span>
+          </div>
+        </div>
+        <div className="prize-sub-cnt-right centered-flex">
+          <div className="centered-flex prize-merch-cnt">
+            <div className="centered-flex podium-cnt scroll">
+              <div className="podium-block centered-flex scroll s00">
+                <div className="circle circle-silver centered-flex">
+                  {svgBank("trophy", "#C0C0C0")}
+                </div>
+                <div className="podium podium-silver centered-flex">
+                  <span className="position">
+                    {svgBank("medal", "#ffffff", "solid")}
+                    {svgBank("medal", "#ffffff", "solid")}
+                  </span>
+                  <br />
+                  <span className="money"> Rs. 15,000</span>
+                </div>
+              </div>
+              <div className="podium-block centered-flex scroll s01">
+                <div className="circle circle-gold centered-flex">
+                  {svgBank("trophy", "#FFD700")}
+                </div>
+                <div className="podium podium-gold centered-flex">
+                  <span className="position">
+                    {svgBank("medal", "#ffffff", "solid")}
+                    {svgBank("medal", "#ffffff", "solid")}
+                    {svgBank("medal", "#ffffff", "solid")}
+                  </span>
+                  <br />
+                  <span className="money"> Rs. 15,000</span>
+                </div>
+              </div>
+              <div className="podium-block centered-flex scroll s02">
+                <div className="circle circle-bronze centered-flex">
+                  {svgBank("trophy", "#B87333")}
+                </div>
+                <div className="podium podium-bronze centered-flex">
+                  <span className="position">
+                    {svgBank("medal", "#ffffff", "solid")}
+                  </span>
+                  <br />
+                  <span className="money"> Rs. 15,000</span>
+                </div>
+              </div>
+            </div>
+            <div className="merch-carousel">
+              <Autoplay images={slides} interval={3000} />
+            </div>
+          </div>
+          <div className="swags centered-flex">
+            {svgBank("gifts", "#FFB703")}
+            <span className="centered-flex merch-text">
+              <span>Stickers, Merchandise</span>
+              <span>& Freebies For Everyone!</span>
+            </span>
+          </div>
+        </div>
+      </div> -->
