@@ -16,21 +16,24 @@
 }
 #prize-div1 {
 	grid-area: 1 / 1 / 5 / 2;
-	background: #f23557;
+	background: var(--secondary);
   overflow: hidden;
 }
 #prize-div2 {
 	grid-area: 1 / 2 / 5 / 5;
-	background: #f0d43a;
+	background: var(--secondary);
 	color: #000;
 }
 #prize-div3 {
 	grid-area: 1 / 5 / 7 / 7;
-	background: #22b2da;
+	background: var(--secondary);
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
 }
 #prize-div4 {
 	grid-area: 5 / 1 / 7 / 5;
-	background: #3b4a6b;
+	background: var(--secondary);
   justify-content: space-between;
   padding: 1rem;
 }
@@ -45,12 +48,33 @@
 
 .prize-gift-text{
   font-family: 'Space Grotesk',sans-serif;
-  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  font-size: clamp(1rem, 1.5vw, 1.8rem);
   align-items: start;
 }
 
 #break2{
   display: none;
+}
+
+.pool-seperator{
+ height: 50%;
+ flex-direction: column;
+  font-size: clamp(2.5rem, 3.3vw, 6rem);
+}
+
+.crowns{
+  height: 20%;
+}
+.crowns svg{
+  height: 80%;
+}
+
+.crowns svg:nth-child(2){
+  height: 100%;
+}
+
+.prize-pool-text{
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
 }
 
 
@@ -62,23 +86,23 @@
 	}
 	#prize-div1 { grid-area: 1 / 1 / 5 / 2; }
 	#prize-div2 { grid-area: 1 / 2 / 5 / 5; }
-	#prize-div3 { grid-area: 5 / 1 / 8 / 5; }
+	#prize-div3 {
+     grid-area: 5 / 1 / 8 / 5;
+    flex-direction: row;
+   }
 	#prize-div4 { grid-area: 8 / 1 / 9 / 5; }
 
   .prize-gift-icon{
   height: 100%;
  }
+
+ .crowns{
+  height: 40%;
+ }
 }
 
 @media (max-width: 768px) {
-	/* #prize-grid {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(4, auto);
-	}
-	#prize-div1, #prize-div2, #prize-div3, #prize-div4 {
-		grid-area: auto;
-		min-height: 200px;
-	} */
+
 
   #prize-div1 { grid-area: 1 / 1 / 5 / 2; }
 	#prize-div2 { grid-area: 1 / 2 / 5 / 5; }
@@ -90,5 +114,9 @@
  }
  #break2{
   display: block;
+ }
+
+ #prize-div3{
+  flex-direction: column;
  }
 }

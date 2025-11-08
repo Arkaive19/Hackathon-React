@@ -1,9 +1,11 @@
-.s00 { animation-delay: 0.25s; }
-.s01 { animation-delay: 0.3s; }
-.s02 { animation-delay: 0.35s; }
-.s03 { animation-delay: 0.4s; }
-.s04 { animation-delay: 0.45s; }
-.s05 { animation-delay: 0.5s; }
+.s00 { animation-delay: 0.15s; }  
+.s01 { animation-delay: 0.3s; }   
+.s02 { animation-delay: 0.45s; }  
+.s03 { animation-delay: 0.6s; }  
+.s04 { animation-delay: 0.75s; }  
+.s05 { animation-delay: 0.9s; }  
+
+
 
 .s1  { animation-delay: 0.4s; }
 .s2  { animation-delay: 0.5s; }

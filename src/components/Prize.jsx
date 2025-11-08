@@ -1,6 +1,7 @@
 import React from "react";
 import Scroll from "./Scroll";
 import Autoplay from "./Autoplay.jsx";
+import PrizeDonut from "./PrizeDonut";
 import Image1 from "../assets/Image1.png";
 import { svg_d } from "./handlers/svg.js";
 
@@ -28,17 +29,42 @@ const Prize = () => {
   return (
     <Scroll className="centered-flex content-section" id="prizes">
       <div id="prize-grid">
-        <div id="prize-div1">
+        <div id="prize-div1" className="scroll">
           <Autoplay images={slides} interval={3000} />
         </div>
-        <div id="prize-div2" className="centered-flex"></div>
-        <div id="prize-div3" className="centered-flex"></div>
-        <div id="prize-div4" className="centered-flex">
+        <div id="prize-div2" className="centered-flex scroll s00">
+          <PrizeDonut
+            width={400}
+            height={400}
+            innerRadius={100}
+            outerRadius={180}
+            rectWidth={100}
+            rectHeight={80}
+          />
+        </div>
+        <div id="prize-div3" className="centered-flex scroll s01">
+          <div className="pool-seperator centered-flex scroll s02">
+            <span className="crowns">
+              {svgBank("crown", "#ffffff")}
+              {svgBank("crown", "#ffffff")}
+              {svgBank("crown", "#ffffff")}
+            </span>
+            <span className="prize-pool-text">A Grand Prize Pool Of</span>
+          </div>
+          <div
+            className="pool-seperator centered-flex"
+            style={{ fontFamily: '"Cubano", sans-serif' }}
+          >
+            Rs. 50,000!
+          </div>
+        </div>
+        <div id="prize-div4" className="centered-flex scroll s02">
           <span className="prize-gift-icon">
             {svgBank("gifts", "#ffffff", "solid")}
           </span>
           <span className="prize-gift-text">
-           Stickers, Freebies <br id="break2" /> and Swags <br id="break1" /> for everyone!
+            Stickers, Freebies <br id="break2" /> and Swags <br id="break1" />{" "}
+            for everyone!
           </span>
         </div>
       </div>
