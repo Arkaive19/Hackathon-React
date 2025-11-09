@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/favicon.png";
+import logo from "../assets/hexa-logo.png";
 
 export const Overlay = ({ onFinish }) => {
   const [visible, setVisible] = useState(false); // controls fade-in
