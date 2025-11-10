@@ -85,3 +85,9 @@ h4 {
 .noise {
   background-image: url("../assets/noise.webp");
 }
+
+.scroll,
+.scroll-el,
+.scroll-elme {
+  opacity: 0;
+}

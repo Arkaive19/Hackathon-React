@@ -96,6 +96,7 @@
   #prize-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    gap: 10px;
   }
   #prize-div1 {
     grid-area: 1 / 1 / 5 / 2;

@@ -38,7 +38,7 @@ const Prize = () => {
               fontSize: "clamp(1.5rem, 5vw, 3rem)",
             }}
           >
-            Prize Distriuition:
+            Click Below:
           </h1>
           <PrizeDonut
             total={50000}

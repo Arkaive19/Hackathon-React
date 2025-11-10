@@ -1,18 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const { pathname, origin, hash } = window.location;
-  if (pathname.endsWith("/index.html")) window.location.replace(`${origin}/`);
-  else if (hash) window.location.replace(`${origin}${pathname}`);
-  else console.log("No #anchor found in URL.");
+  // Remove any anchors, queries, or index.html
+  const { origin, pathname } = window.location;
+  const cleanPath = pathname.replace(/index\.html$/, "");
+  const cleanURL = `${origin}${cleanPath}`;
 
-  const body = document.body;
-  setTimeout(() => (body.style.overflow = "hidden"), 10);
-  setTimeout(() => (body.style.overflow = "auto"), 3200);
+  if (window.location.href !== cleanURL) {
+    window.history.replaceState({}, "", cleanURL);
+  }
 
-  setTimeout(
-    () =>
-      document
-        .querySelector(".main-cnt")
-        ?.scrollIntoView({ behavior: "auto", block: "start" }),
-    1000
-  );
+  // Always scroll to top immediately and lock briefly to prevent jumps
+  window.scrollTo(0, 0);
+  document.body.style.overflow = "hidden";
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+  }, 300);
+
+  // Force scroll to top again after styles load
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 600);
 });

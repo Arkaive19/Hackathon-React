@@ -3,19 +3,29 @@ import Scroll from "./Scroll.jsx";
 
 const About = () => {
   return (
-    <Scroll id="about" className="content-section about-section">
+    <Scroll
+      id="about"
+      className="content-section about-section"
+      style={{
+        maxHeight: "140dvh",
+        padding: "1rem 0rem",
+      }}
+    >
       <div className="about-wrapper">
-        <div className="about-header scroll">
-          <h2 style={{ fontWeight: '900' }}>Deerwalk Hackathon 2025</h2>
+        <div className="about-header scroll-el">
+          <h2 style={{ fontWeight: "900" }}>
+            Deerwalk Hackathon <br className="response-break" /> 2025
+          </h2>
           <p>
-            An immersive eight-hour sprint designed for ambitious high-schoolers
-            ready to build, ship, and shine.
+            An immersive eight-hour sprint designed for{" "}
+            <br className="response-break" /> ambitious high-schoolers ready to
+            build, ship, <br className="response-break" /> and shine.
           </p>
         </div>
 
         <div className="about-grid">
-          <article className="card about-card scroll s1">
-            <h3 style={{ fontWeight: '800' }}>About the Event</h3>
+          <article className="card about-card  scroll-el s00">
+            <h3 style={{ fontWeight: "800" }}>About the Event</h3>
             <p>
               Built exclusively for students in grades 9 through 12, Deerwalk
               Hackathon 2025 invites teams of two to four innovators to tackle
@@ -30,13 +40,16 @@ const About = () => {
             </p>
           </article>
 
-          <article className="card about-card scroll s2">
-            <h3 style={{ fontWeight: '800' }}>Hosted by Deerwalk Sifal School</h3>
+          <article className="card about-card scroll-el s02">
+            <h3 style={{ fontWeight: "800" }}>
+              Hosted by Deerwalk Sifal School
+            </h3>
             <p>
-              Powered by the Deerwalk Education Group, Sifal School bridges the
-              gap between classroom learning and real-world application through
-              technology-forward initiatives. Our campus is purpose-built to
-              nurture curiosity, leadership, and a culture of creating.
+              Powered by the Deerwalk Education Group, Sifal School br
+              className="response-break"idges the gap between classroom learning
+              and real-world application through technology-forward initiatives.
+              Our campus is purpose-built to nurture curiosity, leadership, and
+              a culture of creating.
             </p>
             <p>
               By opening our labs, mentors, and network to the hackathon
@@ -51,4 +64,3 @@ const About = () => {
 };
 
 export default About;
-

@@ -61,14 +61,12 @@
   backdrop-filter: blur(6px);
   white-space: normal;
   transform: translate(0, 0);
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .about-card:hover {
   transform: translate(-5px, -5px);
-  box-shadow: 5px 5px 0 var(--accent);
+  box-shadow: 0 0 20px 4px var(--accent-alt);
 }
 
 .about-card h3 {
@@ -96,4 +94,3 @@
     align-self: center;
   }
 }
-

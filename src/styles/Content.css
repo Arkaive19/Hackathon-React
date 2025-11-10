@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 10rem 0;
 }
 
 .content-section:nth-child(1) {

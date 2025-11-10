@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import logo from "../assets/favicon.webp";
+import logo from "../assets/hexa-logo.webp";
 
 export const Overlay = ({ onFinish }) => {
   const [visible, setVisible] = useState(false); // controls fade-in
