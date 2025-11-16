@@ -1,0 +1,108 @@
+:root {
+  --purple: #8b5cf6;
+  --pink: #ec4899;
+  --gray: #9ca3af;
+  --black: #1f2937;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 1rem;
+  margin: 7vh 0;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 24rem;
+}
+
+/* Fixed carousel - use explicit dimensions OR aspect ratio, not both */
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem; /* Or: width: 100%; max-width: 20rem; */
+  height: 20rem; /* Or remove if using aspect ratio */
+  perspective: 1000px;
+  overflow: visible;
+}
+
+/* Alternative aspect ratio approach */
+.carousel.aspect-ratio {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  max-width: 20rem;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-style: preserve-3d;
+  /* Let JavaScript handle the transform positioning */
+}
+
+.cards-carousel {
+  width: 18rem; /* Slightly smaller than container */
+  height: 18rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background: var(--secondary);
+  color: var(--gray);
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cards-carousel img {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-btn {
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  transition: background 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 600px) {
+  .carousel-wrapper {
+    gap: 0.5rem;
+    margin: 5vh 0;
+  }
+  .carousel {
+    width: 16rem;
+    height: 16rem;
+  }
+  .cards-carousel {
+    width: 14rem;
+    height: 14rem;
+  }
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

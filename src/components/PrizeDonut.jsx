@@ -188,7 +188,7 @@ export default function PrizeDonut({
                 <div
                   style={{
                     fontFamily: '"Cubano", sans-serif',
-                    fontSize: "clamp(12px, 2.2vw, 18px)",
+                    fontSize: "clamp(19px, 2.2vw, 22px)",
                     color: "var(--text)",
                     lineHeight: 1,
                   }}
@@ -198,7 +198,7 @@ export default function PrizeDonut({
                 <div
                   style={{
                     fontFamily: '"Cubano", sans-serif',
-                    fontSize: "clamp(14px, 3vw, 22px)",
+                    fontSize: "clamp(22px, 2.2vw, 30px)",
                     color: accentVar,
                     fontWeight: 700,
                     lineHeight: 1,
@@ -212,17 +212,17 @@ export default function PrizeDonut({
                 <div
                   style={{
                     fontFamily: '"Cubano", sans-serif',
-                    fontSize: "clamp(12px, 2.2vw, 18px)",
+                    fontSize: "clamp(19px, 2.2vw, 22px)",
                     color: "var(--text)",
                     lineHeight: 1,
                   }}
                 >
-                  Prize Pool of
+                  Prize Pool
                 </div>
                 <div
                   style={{
                     fontFamily: '"Cubano", sans-serif',
-                    fontSize: "clamp(14px, 3vw, 22px)",
+                    fontSize: "clamp(22px, 2.2vw, 30px)",
                     color: accentVar,
                     fontWeight: 700,
                     lineHeight: 1,

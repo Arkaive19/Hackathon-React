@@ -1,0 +1,74 @@
+/* ===== Card ===== */
+.about-card {
+  all: unset;
+  width: 97%;
+  flex-direction: column;
+}
+
+/* ===== Day Header ===== */
+.date {
+  display: inline-block;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  /* color: var(--text-color); */
+  margin: 0.25rem 0rem;
+  position: relative;
+}
+.date::after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #e2e8f0;
+  top: 50%;
+  left: 120%;
+  width: 100px;
+}
+
+/* ===== Event ===== */
+.event {
+  display: flex;
+  align-items: flex-start;
+  margin: 0.25rem 0rem;
+}
+.time {
+  flex: 0 0 80px;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin: 0.5rem 0.75rem 0 0;
+  flex-shrink: 0;
+}
+.dot.blue {
+  background-color: #60a5fa;
+}
+.dot.red {
+  background-color: #f87171;
+}
+.dot.indigo {
+  background-color: #4f46e5;
+}
+.dot.yellow {
+  background-color: #facc15;
+}
+.details {
+  flex: 1;
+}
+.title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+}
+
+.time > span {
+  display: block;
+}
+.desc {
+  font-size: 0.84rem;
+  font-weight: 300;
+  color: var(--text-color);
+}

@@ -23,6 +23,7 @@
   --accent-alt: #e2c044;
   --accent: #1c7c54;
   --text: #f2f3d9;
+  --special: rgba(70, 158, 226, 1);
 }
 
 * {

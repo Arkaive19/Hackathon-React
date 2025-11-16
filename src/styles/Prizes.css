@@ -21,7 +21,12 @@
 }
 #prize-div2 {
   grid-area: 1 / 2 / 5 / 5;
-  /* background: var(--secondary); */
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary) 10%,
+    var(--secondary) 61%,
+    var(--special) 100%
+  );
   border: 2px solid var(--accent-alt);
   flex-direction: column;
   padding-top: 1.5rem;
@@ -73,6 +78,7 @@
 .pool-seperator {
   height: 50%;
   color: var(--background);
+  font-weight: 900;
   flex-direction: column;
   font-size: clamp(2.5rem, 3.3vw, 7rem);
 }
@@ -119,6 +125,10 @@
   .crowns {
     height: 40%;
   }
+
+  #prize-grid {
+    width: 90%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -144,5 +154,9 @@
 
   #prize-div3 {
     flex-direction: column;
+  }
+
+  .pool-seperator > br {
+    display: none;
   }
 }
