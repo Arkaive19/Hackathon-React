@@ -3,7 +3,7 @@
   background: #101834;
   color: #c7d2fe;
   padding: clamp(3.75rem, 8vw, 5.5rem) clamp(1.5rem, 6vw, 3rem);
-  height: auto;
+  min-height: auto !important;
   margin-bottom: 0rem !important;
 }
 

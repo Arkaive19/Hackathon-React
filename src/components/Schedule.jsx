@@ -2,7 +2,7 @@ import React from "react";
 
 const Schedule = () => {
   return (
-    <div className="about-card centered-flex scroll-el">
+    <div className="about-card centered-flex">
       <div className="day">
         <span className="date">Saturday 20</span>
         <div className="event">

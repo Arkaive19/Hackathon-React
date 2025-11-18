@@ -1,6 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const Autoplay = ({ images = [], interval = 2500, className = "" }) => {
+const Autoplay = ({
+  images = [],
+  interval = 2500,
+  className = "",
+  objectFit = "contain",
+}) => {
   const [index, setIndex] = useState(0);
   const len = images.length;
   const timeoutRef = useRef(null);
@@ -9,7 +14,7 @@ const Autoplay = ({ images = [], interval = 2500, className = "" }) => {
     if (len <= 1) return;
     timeoutRef.current = setTimeout(
       () => setIndex((p) => (p + 1) % len),
-      interval,
+      interval
     );
     return () => clearTimeout(timeoutRef.current);
   }, [index, interval, len]);
@@ -35,7 +40,7 @@ const Autoplay = ({ images = [], interval = 2500, className = "" }) => {
               width: "100%",
               height: "100%",
               backgroundImage: `url(${src})`,
-              backgroundSize: "contain",
+              backgroundSize: { objectFit },
               backgroundRepeat: "repeat", // fills gaps
               backgroundPosition: "center",
             }}

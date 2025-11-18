@@ -29,7 +29,7 @@ const Footer = () => {
               >
                 <img
                   src={hackathonLogo}
-                  alt="Deerwalk Hackathon logo"
+                  alt="Deerhack School Edition 2025 logo"
                   className="footer-logo scroll-elm"
                 />
               </a>
@@ -47,13 +47,14 @@ const Footer = () => {
 
             <div className="footer-description">
               <h3 className="footer-title scroll-elm s01">
-                Deerwalk Hackathon <br className="response-break" /> 2025
+                Deerhack School Edition 2025 <br className="response-break" />{" "}
+                2025
               </h3>
               <p className="footer-description-text scroll-elm s01" style={{}}>
-                Deerwalk Hackathon 2025 is an 8-hour hackathon for high school
-                students <br className="response-break" /> (grades 9–12).
-                Compete in teams of <br className="response-break" /> 2–4,
-                showcase your talent, and <br className="response-break" />{" "}
+                Deerhack School Edition 2025 2025 is an 8-hour hackathon for
+                high school students <br className="response-break" /> (grades
+                9–12). Compete in teams of <br className="response-break" />{" "}
+                2–4, showcase your talent, and <br className="response-break" />{" "}
                 connect with like-minded innovators.
               </p>
             </div>
@@ -116,8 +117,8 @@ const Footer = () => {
 
         <div className="footer-bottom scroll s07">
           <p>
-            © {currentYear} Deerwalk Hackathon 2025. {eventName}. All rights
-            reserved.
+            © {currentYear} Deerhack School Edition 2025. {eventName}. All
+            rights reserved.
           </p>
           <div className="footer-links">
             <a href="#">Privacy Policy</a>
