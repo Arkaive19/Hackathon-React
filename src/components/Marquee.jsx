@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const Autoplay = ({ images = [], speed = 30 }) => {
+const Marquee = ({ images = [], speed = 30 }) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -47,4 +47,4 @@ const Autoplay = ({ images = [], speed = 30 }) => {
   );
 };
 
-export default Autoplay;
+export default Marquee;

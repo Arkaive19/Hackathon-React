@@ -7,7 +7,7 @@ const Hero = () => {
       id="home"
     >
       <div className="card centered-flex fade-down-in s1">
-        <h1>Mangsir 21-22</h1>
+        <h1>Mangsir 20-21</h1>
         <img src={verticalLogo} className="hero-img" alt="" />
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSclTyGnwDLi_2dRVPwAueW8CFfFq_X7ca8ipHZFiYVu6txUew/viewform"

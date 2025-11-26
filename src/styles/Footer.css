@@ -64,7 +64,9 @@
   overflow: hidden;
   background: rgba(15, 23, 42, 0.6);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .footer-logo {
@@ -118,7 +120,10 @@
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.6);
   color: #f8fafc;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .footer-social a:hover {

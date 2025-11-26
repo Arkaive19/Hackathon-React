@@ -39,7 +39,6 @@ const Schedule = () => {
           </div>
         </div>
       </div>
-
       <div className="day">
         <span className="date">Sunday 21</span>
         <div className="event">

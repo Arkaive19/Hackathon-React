@@ -1,9 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const Carousel = () => {
-  const CARD_COUNT = 8; // Number of cards
+const Carousel = ({ amount, imageSet }) => {
+  const CARD_COUNT = amount; // Number of cards
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = useRef(null);
+
+  if (imageSet[0] == undefined) {
+    for (let k = 0; k <= amount - 1; k++) {
+      imageSet[k] = `${k}`;
+    }
+  }
 
   const goToPrev = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + CARD_COUNT) % CARD_COUNT);
@@ -43,7 +49,7 @@ const Carousel = () => {
               }}
             >
               <div className="cards-carousel">
-                <img src={`./assets/car-${i + 1}.jpg`} alt={`Car ${i + 1}`} />
+                <img src={`${imageSet[i]}.jpg`} alt={`Car ${i + 1}`} />
               </div>
             </div>
           );

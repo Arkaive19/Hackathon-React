@@ -34,7 +34,8 @@
 }
 #prize-div3 {
   grid-area: 1 / 5 / 7 / 7;
-  background: url("../assets/noise.webp"),
+  background:
+    url("../assets/noise.webp"),
     /* noise on top */
       radial-gradient(
         circle at top left,
@@ -43,7 +44,8 @@
       ); /* gradient from top-left */
 
   background-repeat: repeat; /* repeat noise */
-  background-size: 200px, cover; /* make noise bigger (200px) and gradient cover whole element */
+  background-size:
+    200px, cover; /* make noise bigger (200px) and gradient cover whole element */
   background-position: center;
   justify-content: space-between;
   flex-direction: column;

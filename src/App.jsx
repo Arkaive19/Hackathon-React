@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Overlay from "./components/Overlay.jsx";
+import Organisers from "./components/Organisers.jsx";
 import Content from "./components/Content.jsx";
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
           }
         />
 
-        <Route path="/organisers" element={<h1>yo</h1>} />
+        <Route path="/organisers" element={<Organisers></Organisers>} />
         <Route path="/criterias" element={<h1>Coming Soon...</h1>} />
       </Routes>
     </Router>

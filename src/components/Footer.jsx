@@ -47,14 +47,13 @@ const Footer = () => {
 
             <div className="footer-description">
               <h3 className="footer-title scroll-elm s01">
-                Deerhack School Edition 2025 <br className="response-break" />{" "}
-                2025
+                Deerhack School Edition <br className="response-break" /> 2025
               </h3>
               <p className="footer-description-text scroll-elm s01" style={{}}>
-                Deerhack School Edition 2025 2025 is an 8-hour hackathon for
-                high school students <br className="response-break" /> (grades
-                9–12). Compete in teams of <br className="response-break" />{" "}
-                2–4, showcase your talent, and <br className="response-break" />{" "}
+                Deerhack School Edition 2025 is an 8-hour hackathon for high
+                school students <br className="response-break" /> (grades 9–12).
+                Compete in teams of <br className="response-break" /> 2–4,
+                showcase your talent, and <br className="response-break" />{" "}
                 connect with like-minded innovators.
               </p>
             </div>
@@ -87,8 +86,7 @@ const Footer = () => {
                 <div>
                   <p className="footer-detail-heading">Location</p>
                   <p>
-                    Deerwalk Complex
-                    <br className="response-break" />
+                    Deerwalk Complex, <br className="response-break" />
                     Sifal, Kathmandu
                   </p>
                 </div>
@@ -98,7 +96,7 @@ const Footer = () => {
                 <Phone className="footer-detail-icon" />
                 <div>
                   <p className="footer-detail-heading">Contact</p>
-                  <p>+977 923894423</p>
+                  <p>+977 9813127946</p>
                 </div>
               </div>
 

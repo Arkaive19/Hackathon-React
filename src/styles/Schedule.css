@@ -1,8 +1,9 @@
 /* ===== Card ===== */
 .about-card {
-  all: unset;
-  width: 97%;
-  flex-direction: column;
+  /* all: unset; */
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between !important;
 }
 
 /* ===== Day Header ===== */

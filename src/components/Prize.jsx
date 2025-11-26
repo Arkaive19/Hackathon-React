@@ -30,7 +30,7 @@ const Prize = () => {
     <Scroll className="centered-flex content-section" id="prizes">
       <div id="prize-grid">
         <div id="prize-div1" className="scroll">
-          <Autoplay images={slides} interval={3000} />
+          <Autoplay images={slides} interval={3000} objectFit="cover" />
         </div>
         <div id="prize-div2" className="centered-flex scroll s00">
           <h1

@@ -14,7 +14,7 @@ const Autoplay = ({
     if (len <= 1) return;
     timeoutRef.current = setTimeout(
       () => setIndex((p) => (p + 1) % len),
-      interval
+      interval,
     );
     return () => clearTimeout(timeoutRef.current);
   }, [index, interval, len]);
@@ -33,16 +33,15 @@ const Autoplay = ({
         }}
       >
         {images.map((src, i) => (
-          <div
+          <img
             key={i}
+            src={src}
+            alt={`slide-${i}`}
             style={{
               flexShrink: 0,
               width: "100%",
               height: "100%",
-              backgroundImage: `url(${src})`,
-              backgroundSize: { objectFit },
-              backgroundRepeat: "repeat", // fills gaps
-              backgroundPosition: "center",
+              objectFit: objectFit, // Apply objectFit directly here
             }}
           />
         ))}
