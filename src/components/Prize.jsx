@@ -56,7 +56,7 @@ const Prize = () => {
               {svgBank("crown", "#ffffff")}
               {svgBank("crown", "#ffffff")}
             </span>
-            <span className="prize-pool-text">A Grand Prize Pool Of</span>
+            <span className="prize-pool-text">Grand Prize Pool Of</span>
           </div>
           <div className="pool-seperator centered-flex">
             Rs. <br /> 50,000!

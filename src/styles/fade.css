@@ -128,7 +128,7 @@
 
 @keyframes animated-border {
   0% {
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-alt) 90%, transparent);
+    box-shadow: 0 0 0 0 npnp(in srgb, var(--accent-alt) 90%, transparent);
   }
   100% {
     box-shadow: 0 0 0 20px transparent;

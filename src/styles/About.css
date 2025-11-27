@@ -8,13 +8,13 @@
 }
 
 #about-grid > div > h1 {
-  font-size: clamp(0.5rem, 2.5vw + 0.5rem, 3rem);
+  font-size: clamp(0.75rem, 2.5vw + 0.5rem, 2rem);
   font-weight: 450;
   line-height: 1.2;
 }
 
 #about-grid > div > p {
-  font-size: clamp(0.75rem, 1.5vw + 0.3rem, 1.4rem);
+  font-size: clamp(0.75rem, 2vh + 0.3rem, 1.1rem);
   font-weight: 150;
   line-height: 1.4;
 }
@@ -32,7 +32,7 @@
   background-color: var(--primary);
   padding: clamp(0.15rem, 2vw, 1rem);
   border-radius: 20px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .map-box {
@@ -62,7 +62,7 @@
 }
 
 .info-box > div > h1 {
-  font-size: clamp(1.5rem, 2.5vw + 0.5rem, 3rem);
+  font-size: clamp(1rem, 2.5vw + 0.2rem, 2rem);
   line-height: 1.2;
 }
 
@@ -107,7 +107,6 @@
   border-radius: 10px;
   grid-area: 4/4/5/7;
   flex-direction: column;
-  padding: clamp(0.75rem, 2vw, 1rem);
 }
 
 .gradient-border {
