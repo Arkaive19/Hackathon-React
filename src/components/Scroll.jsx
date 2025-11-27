@@ -19,19 +19,15 @@ const Scroll = ({ children, className, id }) => {
     const observers = [
       new IntersectionObserver(
         obsFuncConstructor(".scroll", "fade-up-in"),
-        thres(0.1),
+        thres(0.1)
       ),
       new IntersectionObserver(
         obsFuncConstructor(".scroll-el", "fade-up-in"),
-        thres(0.1),
+        thres(0.1)
       ),
       new IntersectionObserver(
         obsFuncConstructor(".scroll-elm", "fade-up-in"),
-        thres(0.1),
-      ),
-      new IntersectionObserver(
-        obsFuncConstructor(".scroll-elme", "fade-up-in"),
-        thres(0.1),
+        thres(0.1)
       ),
     ];
 
@@ -39,7 +35,6 @@ const Scroll = ({ children, className, id }) => {
       document.querySelector("#prizes"),
       document.querySelector("#about"),
       document.querySelector("#contact"),
-      document.querySelector("#footer"),
     ];
 
     targets.forEach((t, i) => t && observers[i].observe(t));
