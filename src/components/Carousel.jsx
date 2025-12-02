@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const Carousel = ({ amount, imageSet }) => {
+const Carousel = ({ amount, imageSet, className = "carousel-wrapper" }) => {
   const CARD_COUNT = amount; // Number of cards
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = useRef(null);
@@ -22,7 +22,7 @@ const Carousel = ({ amount, imageSet }) => {
   const items = Array.from({ length: CARD_COUNT }, (_, i) => i);
 
   return (
-    <div className="carousel-wrapper">
+    <div className={className}>
       <button className="carousel-btn prev" onClick={goToPrev}>
         &#10094;
       </button>
