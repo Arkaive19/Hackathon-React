@@ -7,9 +7,9 @@ const Scroll = ({ children, className, id }) => {
     return (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          document
-            .querySelectorAll(selector)
-            .forEach((el) => el.classList.add(animation));
+          document.querySelectorAll(selector).forEach((el) => {
+            el.classList.add(animation);
+          });
         }
       });
     };

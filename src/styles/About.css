@@ -8,13 +8,13 @@
 }
 
 #about-grid > div > h1 {
-  font-size: clamp(0.75rem, 2.5vw + 0.5rem, 2rem);
+  font-size: clamp(2rem, 2vw, 2.5rem);
   font-weight: 450;
   line-height: 1.2;
 }
 
 #about-grid > div > p {
-  font-size: clamp(0.75rem, 2vh + 0.3rem, 1.1rem);
+  font-size: clamp(0.75rem, 2vh + 0.3rem, 1.4rem);
   font-weight: 150;
   line-height: 1.4;
 }
@@ -40,7 +40,7 @@
 }
 
 .info-box {
-  grid-area: 2/5/4/7;
+  grid-area: 4/4/5/7;
   flex-direction: column;
   border-radius: 10px;
   padding: clamp(0.75rem, 2vw, 1rem);
@@ -74,6 +74,19 @@
 
 .organisers-box {
   grid-area: 4/1/5/4;
+}
+
+.marq h1 {
+  font-size: clamp(1.25rem, 3vw + 0.5rem, 2rem);
+  line-height: 1.2;
+}
+
+.marq p {
+  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1rem);
+  line-height: 1.4;
+}
+
+.marq {
   border-radius: 10px;
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -82,21 +95,11 @@
   flex-direction: column;
   justify-content: space-around !important;
   padding: clamp(0.75rem, 2vw, 1rem);
-}
-
-.organisers-box h2 {
-  font-size: clamp(1.25rem, 3vw + 0.5rem, 2rem);
-  line-height: 1.2;
-}
-
-.organisers-box p {
-  font-size: clamp(0.75rem, 1.5vw + 0.25rem, 1rem);
-  line-height: 1.4;
-}
-
-.organisers-box {
+  height: 100%;
+  width: 100%;
   background-image: url("../assets/loop.webp");
   background-size: 40% 100%;
+  object-fit: contain;
   background-repeat: repeat;
   animation: marquee 30s infinite linear;
   z-index: 1;
@@ -105,7 +108,7 @@
 .autoplay-box {
   overflow: hidden;
   border-radius: 10px;
-  grid-area: 4/4/5/7;
+  grid-area: 2/5/4/7;
   flex-direction: column;
 }
 
@@ -113,7 +116,7 @@
   --borderWidth: 3px;
   background: var(--primary);
   position: relative;
-  padding: clamp(0.01rem, 1vw, 0.1em);
+  padding: clamp(0.01rem, 1vw, 0.2em);
   border-radius: var(--borderWidth);
 }
 
@@ -167,6 +170,10 @@
     grid-template-rows: repeat(6, auto);
     grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+  .about-card {
+    flex-direction: row !important;
   }
 
   .schedule,

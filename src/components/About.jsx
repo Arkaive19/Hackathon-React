@@ -57,9 +57,10 @@ const About = () => {
             </div>
           </div>
           <div className="organisers-box centered-flex scroll-el s03">
-            <h1 className="gradient-border">Meet the Organisers</h1>
-
-            <button className="btn-alt">Click Here!</button>
+            <div className="marq centered-flex">
+              <h1 className="gradient-border">Meet the Organisers</h1>
+              <button className="btn-alt">Click Here!</button>
+            </div>
           </div>
           <div className="autoplay-box scroll-el s04">
             <Autoplay images={slides} interval={3000} objectFit="cover" />
