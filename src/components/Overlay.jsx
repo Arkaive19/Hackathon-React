@@ -7,13 +7,9 @@ export const Overlay = ({ onFinish }) => {
   const [hexAnimated, setHexAnimated] = useState(false); // draws hex
   const [fadeOut, setFadeOut] = useState(false); // fade-out
   useEffect(() => {
-    // trigger fade-in immediately after mount
     const fadeInTimer = setTimeout(() => setVisible(true), 50);
-    // trigger hex draw after fade-in
     const hexTimer = setTimeout(() => setHexAnimated(true), 600);
-    // start fade-out after hex draw
     const fadeOutTimer = setTimeout(() => setFadeOut(true), 1400);
-    // remove overlay and call parent callback
     const finishTimer = setTimeout(() => {
       if (onFinish) onFinish();
     }, 2000);
