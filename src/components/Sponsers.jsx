@@ -1,22 +1,38 @@
 import React from "react";
+import Scroll from "./Scroll";
+
+const raw = import.meta.glob("/src/assets/Sponsers/*.{png,jpg,jpeg,svg,webp}", {
+  eager: true,
+});
+
+const s_images = Object.fromEntries(
+  Object.entries(raw).map(([path, mod]) => {
+    const name = path.split("/").pop().split(".")[0];
+    return [name, mod.default];
+  })
+);
+
+// console.log(s_images);
 
 const SponsorCategory = ({ title, sponsors }) => (
-  <div className="sponsor-category">
-    <div className="category-title">{title}</div>
-    <div className="sponsor-logos">
+  <div className="sponsor-category centered-flex">
+    <h3 className="category-title">{title}</h3>
+    <div className="sponsor-logos centered-flex">
       {sponsors.map((sponsor, index) => (
-        <div key={index} className="sponsor-item">
-          <a target="_blank" href={sponsor.link} rel="noopener noreferrer">
-            <img
-              alt={sponsor.name}
-              loading="lazy"
-              width="100"
-              height="100"
-              className="sponsor-logo"
-              src={sponsor.logo}
-            />
-          </a>
-        </div>
+        <>
+          <div key={index} className="sponsor-item">
+            <a target="_blank" href={sponsor.link} rel="noopener noreferrer">
+              <img
+                alt={sponsor.name}
+                loading="lazy"
+                width="100"
+                height="100"
+                className="sponsor-logo"
+                src={sponsor.logo}
+              />
+            </a>
+          </div>
+        </>
       ))}
     </div>
   </div>
@@ -25,12 +41,22 @@ const SponsorCategory = ({ title, sponsors }) => (
 const Sponsors = () => {
   const sponsorsData = [
     {
+      title: "Title Sponsor",
+      sponsors: [
+        {
+          name: "Deerhold",
+          logo: s_images.deerhold_logo,
+          link: "https://deerhold.com",
+        },
+      ],
+    },
+    {
       title: "Platinum Sponsor",
       sponsors: [
         {
-          name: "Nimb",
-          logo: "/_next/static/media/NimbLogo.1b3334fd.svg",
-          link: "https://www.nimb.com.np/en/personal-banking",
+          name: "Edwise Foundation",
+          logo: s_images.edwise_logo,
+          link: "https://www.edwisefoundation.com",
         },
       ],
     },
@@ -38,38 +64,92 @@ const Sponsors = () => {
       title: "Gold Sponsors",
       sponsors: [
         {
-          name: "Annapurna Post",
-          logo: "/_next/static/media/Annapurna_Logo.68d43356.png",
-          link: "https://www.annapurnapost.com",
+          name: "Tech Gorkha",
+          logo: s_images.tech_gurkha_logo,
+          link: "https://techgurkha.com.np/",
+        },
+      ],
+    },
+    {
+      title: "Silver Sponsor",
+      sponsors: [
+        {
+          name: "Deerwalk Training Center",
+          logo: s_images.deerwalk_training_center_logo,
+          link: "https://deerwalktrainingcenter.com",
+        },
+      ],
+    },
+    {
+      title: "Supported By",
+      sponsors: [
+        {
+          name: "Cedar Gate",
+          logo: s_images.cedar_gate_logo,
+          link: "https://www.cedargate.com/",
         },
         {
-          name: "HamroCSIT",
-          logo: "/_next/static/media/hamro_csit_logo_black.b6cc30cd.png",
-          link: "https://hamrocsit.com",
+          name: "Infinite Solution",
+          logo: s_images.infinite_solutions_logo,
+          link: "https://www.infinite.com/",
         },
         {
-          name: "Mero Style",
-          logo: "/_next/static/media/MeroStyle.4a1c7eda.svg",
-          link: "https://merostyle.com/",
+          name: "gen.xyz",
+          logo: s_images.gen_xyz_logo,
+          link: "https://gen.xyz/",
         },
+      ],
+    },
+    {
+      title: "Mobility Partner",
+      sponsors: [
         {
-          name: "Devfolio",
-          logo: "/_next/static/media/Devfolio_Logo-White.6a4ba553.svg",
-          link: "https://devfolio.co",
+          name: "Pathao",
+          logo: s_images.pathao_logo,
+          link: "https://pathao.com",
         },
+      ],
+    },
+    {
+      title: "Learning Platform Partner",
+      sponsors: [
         {
-          name: "YOLO",
-          logo: "/_next/static/media/yolo.b79c0a8d.png",
-          link: "https://www.instagram.com/yolobrand_/?hl=en",
+          name: "Programiz",
+          logo: s_images.programiz_logo,
+          link: "https://programiz.com",
+        },
+      ],
+    },
+
+    {
+      title: "Media Partner",
+      sponsors: [
+        {
+          name: "Hamro Patro",
+          logo: s_images.hamropatro_logo,
+          link: "https://hamropatro.com/",
+        },
+      ],
+    },
+    {
+      title: "Hospitality Partner",
+      sponsors: [
+        {
+          name: "Deerwalk Foods",
+          logo: s_images.foods_deerwalk_logo,
+          link: "https://deerwalkfoods.com/",
         },
       ],
     },
   ];
 
   return (
-    <div className="sponsors-container">
+    <Scroll
+      id="sponsers"
+      className="content-section centered-flex sponsers-section"
+    >
       <div className="sponser-header">
-        <div className="sponser-title">Our Sponsors</div>
+        <h1 className="sponser-title">Our Sponsors</h1>
       </div>
       {sponsorsData.map((category, index) => (
         <SponsorCategory
@@ -78,7 +158,7 @@ const Sponsors = () => {
           sponsors={category.sponsors}
         />
       ))}
-    </div>
+    </Scroll>
   );
 };
 
