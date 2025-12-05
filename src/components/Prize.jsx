@@ -59,7 +59,7 @@ const Prize = () => {
             <span className="prize-pool-text">Grand Prize Pool Of</span>
           </div>
           <div className="pool-seperator centered-flex">
-            Rs. <br /> 50,000!
+            Rs. <br /> 7,00,000!
           </div>
         </div>
         <div id="prize-div4" className="centered-flex scroll s02">

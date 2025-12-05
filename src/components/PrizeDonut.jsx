@@ -217,7 +217,7 @@ export default function PrizeDonut({
                     lineHeight: 1,
                   }}
                 >
-                  Prize Pool
+                  Cash Prize
                 </div>
                 <div
                   style={{
