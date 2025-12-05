@@ -34,23 +34,22 @@
 }
 #prize-div3 {
   grid-area: 1 / 5 / 7 / 7;
-  background:
-    url("../assets/noise.webp"),
-    /* noise on top */
+  background: url("../assets/Crown.png") no-repeat bottom right,
+    /* Crown */ url("../assets/noise.webp") repeat,
+    /* Noise */
       radial-gradient(
         circle at top left,
         rgba(70, 158, 226, 1) 0%,
         rgba(22, 74, 83, 1) 100%
-      ); /* gradient from top-left */
+      ); /* Gradient */
 
-  background-repeat: repeat; /* repeat noise */
-  background-size:
-    200px, cover; /* make noise bigger (200px) and gradient cover whole element */
-  background-position: center;
+  background-size: 70%, 200px, cover; /* Crown small, noise 200px, gradient full */
+  background-position: bottom right, center, center;
   justify-content: space-between;
   flex-direction: column;
   padding: 1rem;
 }
+
 #prize-div4 {
   grid-area: 5 / 1 / 7 / 5;
   /* background: var(--primary); */
@@ -79,7 +78,7 @@
 
 .pool-seperator {
   height: 50%;
-  color: var(--background);
+  color: #c8fffc;
   font-weight: 900;
   flex-direction: column;
   font-size: clamp(2.5rem, 3.3vw, 7rem);
@@ -101,6 +100,23 @@
 }
 
 @media (max-width: 1024px) {
+  #prize-div3 {
+    background: url("../assets/Crown.png") no-repeat bottom right,
+      /* Crown */ url("../assets/noise.webp") repeat,
+      /* Noise */
+        radial-gradient(
+          circle at top left,
+          rgba(70, 158, 226, 1) 0%,
+          rgba(22, 74, 83, 1) 100%
+        ); /* Gradient */
+
+    background-size: 30%, 200px, cover; /* Crown small, noise 200px, gradient full */
+    background-position: bottom right, center, center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
   #prize-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -134,6 +150,23 @@
 }
 
 @media (max-width: 768px) {
+  #prize-div3 {
+    background: url("../assets/Crown.png") no-repeat bottom right,
+      /* Crown */ url("../assets/noise.webp") repeat,
+      /* Noise */
+        radial-gradient(
+          circle at top left,
+          rgba(70, 158, 226, 1) 0%,
+          rgba(22, 74, 83, 1) 100%
+        ); /* Gradient */
+
+    background-size: 50%, 200px, cover; /* Crown small, noise 200px, gradient full */
+    background-position: bottom right, center, center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
   #prize-div1 {
     grid-area: 1 / 1 / 5 / 2;
   }
@@ -160,5 +193,24 @@
 
   .pool-seperator > br {
     display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  #prize-div3 {
+    background: url("../assets/Crown.png") no-repeat bottom right,
+      /* Crown */ url("../assets/noise.webp") repeat,
+      /* Noise */
+        radial-gradient(
+          circle at top left,
+          rgba(70, 158, 226, 1) 0%,
+          rgba(22, 74, 83, 1) 100%
+        ); /* Gradient */
+
+    background-size: 70%, 200px, cover; /* Crown small, noise 200px, gradient full */
+    background-position: bottom right, center, center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
   }
 }

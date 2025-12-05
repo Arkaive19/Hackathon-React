@@ -12,7 +12,7 @@ const s_images = Object.fromEntries(
   })
 );
 
-// console.log(s_images);
+console.log(s_images);
 
 const SponsorCategory = ({ title, sponsors }) => (
   <div className="sponsor-category centered-flex">
@@ -58,6 +58,11 @@ const Sponsors = () => {
           logo: s_images.edwise_logo,
           link: "https://www.edwisefoundation.com",
         },
+        {
+          name: "NIMB",
+          logo: s_images.nimb_logo,
+          link: "https://www.edwisefoundation.com",
+        },
       ],
     },
     {
@@ -78,6 +83,11 @@ const Sponsors = () => {
           logo: s_images.deerwalk_training_center_logo,
           link: "https://deerwalktrainingcenter.com",
         },
+        {
+          name: "109 Degrees Restraunt",
+          logo: s_images.degrees_109_logo,
+          link: "https://109degrees.com.np/",
+        },
       ],
     },
     {
@@ -97,6 +107,11 @@ const Sponsors = () => {
           name: "gen.xyz",
           logo: s_images.gen_xyz_logo,
           link: "https://gen.xyz/",
+        },
+        {
+          name: "Balloon Nepal",
+          logo: s_images.balloon_nepal_logo,
+          link: "https://balloonnepal.com/",
         },
       ],
     },

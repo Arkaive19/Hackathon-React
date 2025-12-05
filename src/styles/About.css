@@ -35,6 +35,11 @@
   overflow: auto;
 }
 
+.schedule,
+.about-box {
+  min-height: fit-content;
+}
+
 .map-box {
   grid-area: 2/1/4/5;
 }
