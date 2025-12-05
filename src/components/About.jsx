@@ -59,7 +59,9 @@ const About = () => {
           <div className="organisers-box centered-flex scroll-el s03">
             <div className="marq centered-flex">
               <h1 className="gradient-border">Meet the Organisers</h1>
-              <button className="btn-alt">Click Here!</button>
+              <a href="/organisers">
+                <button className="btn-alt">Click Here!</button>
+              </a>
             </div>
           </div>
           <div className="autoplay-box scroll-el s04">

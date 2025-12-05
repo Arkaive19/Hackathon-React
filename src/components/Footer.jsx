@@ -87,10 +87,13 @@ const Footer = () => {
               >
                 <Instagram />
               </a>
-              <a href="#" aria-label="Twitter">
+              <a href="https://x.com/deerwalkcollege/" aria-label="Twitter">
                 <Twitter />
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/deerwalk-inc"
+                aria-label="LinkedIn"
+              >
                 <Linkedin />
               </a>
             </div>
