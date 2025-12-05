@@ -1,6 +1,7 @@
 .organisers-main {
   flex-direction: column;
   margin-top: 10rem;
+  gap: 10dvh;
 }
 .content-title {
   flex-direction: column;

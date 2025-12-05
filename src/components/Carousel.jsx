@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const Carousel = ({ amount, imageSet, className = "carousel-wrapper" }) => {
   const CARD_COUNT = amount; // Number of cards
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
   const carouselRef = useRef(null);
 
   if (imageSet[0] == undefined) {

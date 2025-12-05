@@ -25,7 +25,18 @@ const App = () => {
           }
         />
 
-        <Route path="/organisers" element={<Organisers></Organisers>} />
+        <Route
+          path="/organisers"
+          element={
+            <>
+              {showContent ? (
+                <Organisers />
+              ) : (
+                <Overlay onFinish={onOverlayFinish} />
+              )}
+            </>
+          }
+        />
         <Route path="/criterias" element={<h1>Coming Soon...</h1>} />
       </Routes>
     </Router>

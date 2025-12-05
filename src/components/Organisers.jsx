@@ -1,11 +1,11 @@
 import React from "react";
 import Carousel from "./Carousel.jsx";
-import Navigation from "./Navigation.jsx";
+import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 const Organisers = () => {
   return (
     <>
-      <Navigation />
+      <Navbar></Navbar>
       <div className="centered-flex organisers-main content-main">
         <span className="head-title fade-up-in s6">
           <h1>Meet The Organisers!</h1>

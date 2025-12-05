@@ -23,19 +23,17 @@
   max-width: 24rem;
 }
 
-/* Fixed carousel - use explicit dimensions OR aspect ratio, not both */
 .carousel {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20rem; /* Or: width: 100%; max-width: 20rem; */
-  height: 20rem; /* Or remove if using aspect ratio */
+  width: 20rem;
+  height: 20rem;
   perspective: 1000px;
   overflow: visible;
 }
 
-/* Alternative aspect ratio approach */
 .carousel.aspect-ratio {
   width: 100%;
   height: auto;
@@ -49,11 +47,10 @@
   left: 50%;
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-style: preserve-3d;
-  /* Let JavaScript handle the transform positioning */
 }
 
 .cards-carousel {
-  width: 18rem; /* Slightly smaller than container */
+  width: 18rem;
   height: 18rem;
   border-radius: 1rem;
   padding: 0.5rem;

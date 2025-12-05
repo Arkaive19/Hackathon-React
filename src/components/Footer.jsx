@@ -10,8 +10,8 @@ import {
   Linkedin,
 } from "lucide-react";
 
-import sifalLogo from "../assets/sifalSchool.png";
-import hackathonLogo from "../assets/hackathonLogo.png";
+import sifalLogo from "../assets/sifalSchool.webp";
+import hackathonLogo from "../assets/hackathonLogo.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
