@@ -67,8 +67,8 @@ const Prize = () => {
             {svgBank("gifts", "#D33A3A", "solid")}
           </span>
           <span className="prize-gift-text">
-            Stickers, Freebies <br id="break2" /> and Swags <br id="break1" />{" "}
-            for everyone!
+            Free Vouchers For Track Reward
+            <br id="break2" /> winners <br id="break1" /> worth 120$ each!
           </span>
         </div>
       </div>
